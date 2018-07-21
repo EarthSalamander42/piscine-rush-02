@@ -12,11 +12,6 @@
 
 void	ft_putchar(char c);
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	rush012(int x, int y, int x2, int y2)
 {
 	if (y2 == y && x2 == 1 && y2 != 1)
