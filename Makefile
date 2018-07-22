@@ -21,7 +21,7 @@ all: $(EXEC)
 $(EXEC):
 	gcc -o $(EXEC) $(SRC)
 
-flag:
+fl:
 	gcc $(CFLAGS) -o $(EXEC) $(SRC)
 
 clean:
@@ -31,3 +31,5 @@ fclean: clean
 	rm -rf $(EXEC)
 
 re: fclean all
+
+refl: fclean fl
