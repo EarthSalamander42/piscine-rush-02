@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmaguire <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/12 16:38:13 by jmaguire          #+#    #+#             */
-/*   Updated: 2018/07/12 16:42:19 by jmaguire         ###   ########.fr       */
+/*   Created: 2018/07/11 09:53:04 by jmaguire          #+#    #+#             */
+/*   Updated: 2018/07/11 19:27:00 by jmaguire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str)
+int		ft_strcmp(char *s1, char *s2)
 {
 	int i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i = i + 1;
+	return (s1[i] - s2[i]);
 }

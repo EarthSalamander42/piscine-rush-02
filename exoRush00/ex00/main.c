@@ -10,10 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 void	rush(int x, int y);
 
-int		main(void)
+int		ft_strcmp(char *s1, char *s2)
 {
-	rush(4, 0);
+	int i;
+
+	i = 0;
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+		i = i + 1;
+	return (s1[i] - s2[i]);
+}
+
+int		main(int argc, char **argv)
+{
+	argc++;
+	argc--;
+	if (ft_strcmp(argv[1], "Colle-00") == 0)
+		printf("%d\n", 1);
 	return (0);
 }
