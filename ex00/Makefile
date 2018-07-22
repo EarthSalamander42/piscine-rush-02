@@ -16,13 +16,10 @@ CFLAGS = -Wall -Wextra -Werror
 
 # Commands
 
-all: $(EXEC)
+all:
+	cc $(CFLAGS) -o $(EXEC) $(SRC) -L. -lft
 
-$(EXEC):
-	gcc -o $(EXEC) $(SRC)
-
-flag:
-	gcc $(CFLAGS) -o $(EXEC) $(SRC)
+base: $(EXEC)
 
 clean:
 	rm -rf *.o
@@ -31,3 +28,8 @@ fclean: clean
 	rm -rf $(EXEC)
 
 re: fclean all
+
+refl: fclean fl
+
+$(EXEC):
+	cc -o $(EXEC) $(SRC)
